@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: light,
+          dark,
+          cupcake,
+          bumblebee,
+          emerald,
+          corporate,
+          synthwave,
+          retro,
+          cyberpunk,
+          valentine,
+          halloween,
+          garden,
+          forest,
+          aqua,
+          lofi,
+          pastel,
+          fantasy,
+          wireframe,
+          black,
+          luxury,
+          dracula,
+          cmyk,
+          autumn,
+          business,
+          acid,
+          lemonade,
+          night,
+          coffee,
+          winter,
+          dim,
+          nord,
+          sunset;
+}
+
+
+
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: oklch(var(--bc) / 0.3);
+    border-radius: 9999px;
+  }
+
+  .scrollbar:hover::-webkit-scrollbar-thumb {
+    background: oklch(var(--bc) / 0.5);
+  }
+
+  .scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: oklch(var(--bc) / 0.3) transparent;
+  }
+
+  .scrollbar::-webkit-scrollbar-button:start:decrement,
+  .scrollbar::-webkit-scrollbar-button:end:increment {
+    display: none;
+  }
+}
+
+
